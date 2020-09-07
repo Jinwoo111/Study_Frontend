@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var var1 = 1; // var 변수는 재선언과 재할당이 가능
+        let let1 = 2; // let 변수는 재선언 불가능, 재할당 가능
+        const const1 = 3; // const 변수는 재선언과 재할당이 모두 불가능
+
+        /* ==는 동등연산자로 좌항과 우항의 값이 서로 같을 때 true, 다르면 false
+        ===는 일치연산자로 좌항과 우항의 값이 정확하게 같으면 true, 다르면 false
+        이 두 연산자는 수 뿐만 아니라 문자열 등에서도 같게 적용*/
+        console.log(1=='1'); //true
+        console.log(1==='1'); //false -> 데이터의 형식이 다르다 (===를 사용하는 것이 좋다)
+        // null == undefined(O), null === undefined(X)
+        console.log(null == undefined); 
+        console.log(null === undefined);
+        /*NaN은 0/0과 같은 결과로 특수한 데이터 형이지만 숫자가 아니라는 뜻
+        !=는 같지 않다. !==는 정확하게 같지 않다*/
+        
+    </script>
+</body>
+</html>
