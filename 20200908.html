@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수에서 return은 함수를 종료시킴과 동시에 뒤에 있는 값을 출력한다.
+        function get_member(num){ //num을 매개변수(parameter)라 한다.
+            return num;
+        }
+        document.write(get_member(3)); //3을 인자(argument)라고 한다.
+        //get_member()에 3을 넣어주어 return 값에 3이 출력된다. (num === 3)
+        
+        numbering = function(){
+            document.write(' numbering 함수가 호출되었습니다. ');
+        } // 함수를 여러 방법으로 정의할 수 있다.
+        document.write(numbering() +'<br>');
+        
+        (function(){
+            i= 0;
+            document.write(i + '<br>');
+        })(); //익명함수, 일회성으로 실행하기 위해 사용한다.-> 이름이 없음
+
+        var array = ['Lee', 'Park', 'Kim']; //들어있는 값들을 원소라고 칭함
+        var small_letter = 'lee';
+        // .toUpperCase : 소문자를 대문자로 만들어주는 함수(내장함수)
+        document.write(small_letter.toUpperCase());
+        var array_1 = ['L', 'P', 'K'];
+        document.write(array_1.length);
+    </script>
+</body>
+</html> 
