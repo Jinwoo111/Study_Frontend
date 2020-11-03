@@ -3,8 +3,35 @@ import logo from './logo.svg';
 import './App.css';
 import Comment from './Comment';
 
-function App() {
-  return (
+const commentsFromServer = [
+  {name: 'Jinwoo Lee', content: 'My comment!'},
+  {name: 'Jiwon Jung', content: 'Everybody Listen!'},
+];
+var timer;
+
+class App extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.state = {
+      comments:[],
+    };
+  }
+
+  compenentDidMount(){
+    let comments = this.state.comments;
+    timer = setInterval(() => {
+      if(comments.length < commentsFromServer.length){
+        let index = comments.length;
+        comments.push(commentsFromServer[index]);
+      } else if(timer){
+        clearInterval(timer);
+      }
+    }, 1000);
+  }
+  render(){
+    const {comments} = this.state;
+    return (
     <div className="App" style={{padding: 16, backgroundColor: '#282c34'}}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -21,11 +48,17 @@ function App() {
         </a>
       </header>
       <div>
-      <Comment name={'Jinwoo Lee'} content={'I want to go home!'} />
-      <Comment name={'Jiwon Jung'} content={'everybody listen!'} />
+        {comments.map((comment, index)=> {
+          return(
+            <Comment 
+              name={comment.name}
+              content={comment.content}/>
+          )
+        })}
       </div>
     </div>
   );
+  }
 }
 // comment name, comment is props.
 export default App;
