@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Chapter06 from './Chapter06';
 
 // function tick() {
 //   const element = (
@@ -17,7 +18,7 @@ import reportWebVitals from './reportWebVitals';
 // }
 // setInterval(tick, 1000);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Chapter06 />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

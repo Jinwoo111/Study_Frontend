@@ -4,8 +4,8 @@ import './App.css';
 import Comment from './Comment';
 
 const commentsFromServer = [
-  {name: 'Jinwoo Lee', content: 'My comment!'},
-  {name: 'Jiwon Jung', content: 'Everybody Listen!'},
+  { id: 1, name: 'Jinwoo Lee', content: 'My comment!'},
+  { id: 2, name: 'Jiwon Jung', content: 'Comment'},
 ];
 var timer;
 
@@ -14,16 +14,20 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-      comments:[],
+      comments: [{ id: 1, name: 'Jinwoo Lee', content: 'My comment!' },
+        { id: 2, name: 'Jiwon Jung', content: 'Comment' },],
     };
   }
 
-  compenentDidMount(){
+  componentDidMount(){
     let comments = this.state.comments;
     timer = setInterval(() => {
-      if(comments.length < commentsFromServer.length){
+      if (comments.length > 0){
         let index = comments.length;
-        comments.push(commentsFromServer[index]);
+      comments.pop();
+        this.setState({
+          comments : comments
+        });
       } else if(timer){
         clearInterval(timer);
       }
@@ -51,6 +55,8 @@ class App extends React.Component{
         {comments.map((comment, index)=> {
           return(
             <Comment 
+            key={comment.id}
+            id={comment.id}
               name={comment.name}
               content={comment.content}/>
           )
