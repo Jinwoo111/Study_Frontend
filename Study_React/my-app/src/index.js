@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Chapter06 from './Chapter06';
+import Greeting from './Chapter07/Greeting';
+import LoginControl from './Chapter07/LoginControl';
 
 // function tick() {
 //   const element = (
@@ -18,7 +20,7 @@ import Chapter06 from './Chapter06';
 // }
 // setInterval(tick, 1000);
 
-ReactDOM.render(<Chapter06 />, document.getElementById('root'));
+ReactDOM.render(<LoginControl />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
