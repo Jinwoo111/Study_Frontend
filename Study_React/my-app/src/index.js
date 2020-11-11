@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Chapter06 from './Chapter06';
 import Greeting from './Chapter07/Greeting';
 import LoginControl from './Chapter07/LoginControl';
+import AttendanceBook from './Chapter08/AttendanceBook';
+import SignUp from './Chapter09/SignUp';
 
 // function tick() {
 //   const element = (
@@ -20,7 +22,7 @@ import LoginControl from './Chapter07/LoginControl';
 // }
 // setInterval(tick, 1000);
 
-ReactDOM.render(<LoginControl />, document.getElementById('root'));
+ReactDOM.render(<SignUp />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
